@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+#main-page {
+    background: url('image-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 110vh;
+}
+
+.loginrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#div-2 {
+    background: rgba(116, 81, 45, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 50px 25px 40px 25px;
+    width: 100%;
+    max-width: 570px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#div-2 h1 {
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+}
+
+#div-2 .phar1, #pId {
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+}
+
+div#loginwrap {
+    padding: 80px 0
+}
+
+#log-image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 1% auto; 
+    display: block;
+}
+.loginrow #fname, .loginrow #lname {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-style: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: whitesmoke;
+}
+
+.loginrow #mobnum, .loginrow #pass {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-style: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: whitesmoke; 
+}
+
+#fname::placeholder, #lname::placeholder, #mobnum::placeholder, #pass::placeholder {
+    color: white;
+}
+
+.loginrow #pass, #show-password {
+    margin-bottom: 1px;
+}
+
+.phar2 {
+    text-align: left;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 13px;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    color: whitesmoke;
+}
+
+#label1 {
+    font-size: 11px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 5px;
+}
+
+#show-password {
+    margin: 0;
+    width: auto;
+}
+
+
+.gender-selection {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    margin: 10px 0 0 110px;
+}
+.gender-option {
+    margin: 5px 0;
+}
+label {
+    margin-left: 10px;
+    font-size: 1em;
+}
+.radio-input {
+    display: none;
+}
+.radio-label {
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.radio-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #543310;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+.radio-input:checked + .radio-label .radio-custom {
+    background: #543310;
+}
+.radio-input:checked + .radio-label .radio-custom::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.loginrow [type=submit] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #543310;
+    font-weight: bold;
+    font-size: 18px;
+    color: whitesmoke;
+}
+.loginrow [type=submit]:hover {
+    background-color: #74512D;
+    transition: all 0.5s ease;
+}
+
+
+input[type="date"] {
+    width: 100%;
+    text-align: center;
+    border-style: none;
+    color: white;
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+
+
+.signIn a {
+    text-decoration: none;
+}
+.signIn #pId {
+    font-weight: normal;
+}
+.signIn #pId:hover {
+    color: #AF8F6F;
+    cursor: pointer;
+    text-decoration-color: whitesmoke;
+    text-decoration: underline;
+}
+
+
+.footer {
+    display: flex;
+    background-color: #543310;
+    text-align: center;
+    padding: 10px; 
+}
+.footer p {
+    margin: auto;
+    color: white;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+@media (max-width: 600px){
+    .gender-selection {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%; 
+        margin: 10px auto; 
+        padding: 0 10px;
+    }
+    #main-page {
+        background: url(image-background.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: 170vh;
+    }
+    .loginrow #fname, .loginrow #lname {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-style: none;
+        border-bottom: 1px solid white;
+        background: transparent;
+        color: whitesmoke;
+    }
+}

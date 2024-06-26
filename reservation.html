@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon"  type="jpg" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="index.css">
+    
+    
+</head>
+<body>
+    <header class="page-header0">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div class="burger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="other">Home</a></li>
+                    <li><a href="menu.html" class="other">Menu</a></li>
+                    <li><a href="reservation.html" id="reservation">Reservation</a></li>
+                    <li><a href="aboutUs.html" class="other">About Us</a></li>
+                    <li><a href="contactUs.html" class="other">Contact Us</a></li>    
+                    <li><a href="ourChef.html">Our Chef</a></li>
+                </ul>
+                <a href="login.html" id="loginButton" class="loginButton">Log In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="page-main0">
+        <section class="picture-container">
+            <div>
+                <img id="img-1" src="edward-franklin.jpg" alt="try again">
+            </div>
+            <div class="main1">
+                <h1>Visit us, make your reservation</h1>
+                <p> ⭐⭐⭐⭐⭐ </p>
+                <p>Located at  Barangay Anabu II - F, Imus City, open from 10 AM to 10 PM daily.</p>
+            </div>
+        </section>
+        <section class="picture-container1">
+            <div>
+                <img id="img-2" src="fabrizio-magoni.jpg" alt="try again">
+            </div>
+            <div class="main2">
+                <h2>Book your table today</h2>
+                <p>Enjoy a complimentary dessert with your first reservation!</p>
+                <form id="reservation-form" onsubmit="return validateForm()">
+                    <div class="form-row">
+                        <div id="div-date">
+                            <label id="label-date" for="date">Date:</label>
+                            <input id="date" required type="date" placeholder="Date">
+                            <span class="error" id="date-error"></span>
+                        </div>
+                        <div id="div-pnum">
+                            <label id="label-pnum" for="phoneNum">Phone Number:</label>
+                            <input id="phoneNum" required type="tel" placeholder="Phone number" pattern="[0-9\s\-]+" title="Please enter a valid phone number.">
+                            <span class="error" id="phoneNum-error"></span>
+                        </div>
+                        <div>
+                            <label for="numGuest">Number of Guests:</label>
+                            <input id="numGuest" required type="number" placeholder="Number of guests" min="1" max="25">
+                            <span class="error" id="numGuest-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input id="name" required type="text" placeholder="Name">
+                            <span class="error" id="name-error"></span>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input id="email" required type="email" placeholder="Email">
+                            <span class="error" id="email-error"></span>
+                        </div>
+                        <div>
+                            <label for="time">Time:</label>
+                            <input id="time" required type="time" placeholder="Time">
+                            <span class="error" id="time-error"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" value="MAKE YOUR RESERVATION">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="footer">
+            <p>2024 Marco's Dining Establishment. All rights reserved. Designed by PAJA, JOHN MARCO R. & MIRABUENO, EUGENE M. – BSIT-22M1 for ICT 008 Final Project.</p>
+        </div>
+    </footer>
+    <script src="reservation.js"></script>
+
+</body>
+</html>

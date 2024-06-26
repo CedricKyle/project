@@ -1,0 +1,354 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+.page-header0 {
+    background-color: #543310;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+}
+
+.page-header0 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+a#reservation {
+    text-decoration: underline;
+    color: #AF8F6F;
+}
+.page-header0 .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-header0 .nav-links li {
+    margin-right: 20px;
+}
+
+.page-header0 .nav-links li:last-child {
+    margin-right: 0;
+}
+
+.page-header0 .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.page-header0 .nav-links li a:hover {
+    color: #AF8F6F;
+    text-decoration: underline;
+}
+
+.logo img {
+    height: 80px;
+    border-radius: 20px;
+}
+
+.loginButton {
+    background-color: #74512D;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: white;
+    color: #74512D;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20px;
+    height: 20px;
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .page-header0 .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #543310;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .page-header0 .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .page-header0 .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger-menu.active .bar:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .bar:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.picture-container {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+.picture-container #img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-content: center;
+    color: white;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 60px;
+    border-radius: 10px;
+}
+.main1 h1{
+    font-size: 3em;
+    background: linear-gradient(90deg, #F8F4E1, #AF8F6F);
+    -webkit-background-clip: text;
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;
+}
+.main1 p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.picture-container1{
+    position: relative;
+    width: 100%;
+    height: 55.5vh;
+    overflow: hidden;
+}
+.picture-container1 #img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-content: center;
+    color: white;
+    z-index: 1;
+    background: rgba(255, 255, 255, 1);
+    padding: 60px;
+    border-radius: 10px;
+}
+.main2 h2{
+    font-size: 3em;
+    margin: 0 0 10px;
+    color: #543310;
+}
+.main2 p {
+    font-size: 1.5em;
+    margin: 0;
+    color: #AF8F6F;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+     border-style: none;
+}
+.form-row {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+.form-row div {
+    flex: 1;
+}
+label {
+    display: block;
+    margin-bottom: .5em;
+    color:  black;
+}
+input {
+    border: 1px solid #ccc;
+    padding: .5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: .25em;
+}
+input[type="submit"] {
+    padding: 0.7em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: .25em;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+@media  screen and (max-width: 1024px){
+    img#img-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main1 h1 {
+        font-size: 3em;
+    }
+    .main2 h2 {
+        font-size: 1.7em;
+    }
+    .main2 {
+        width: 95%;
+    }
+    section.picture-container1 {
+        height: 75vh;
+        background: black;
+    }
+}
+@media (max-width: 600px){
+    img#img-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main1 p {
+        font-size: 15px;
+        margin: -5px;
+    }
+    .main1 h1 {
+        font-size: 25px
+    }
+    .main2 h2 {
+        font-size: 20px;
+    }
+    .main2 {
+        width: 95%;
+        padding: 1px;
+    }
+    .main2 p {
+        font-size: 16px;
+    }
+    section.picture-container1 {
+        height: 70vh;
+        background: black;
+    }
+    section.picture-container {
+        background: black;
+    }
+    .main1 {
+        top: 35%;
+    }
+    label#label-pnum {
+        margin-bottom: 7px;
+    }
+    input#date {
+        margin: 19px 0 0px 0px;
+        padding: 17px 0 0 0;
+        text-align: center;
+    }
+}
+@media (max-width: 1280px){
+    img#img-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main2 h2 {
+        font-size: 1.7em;
+    }
+    .main2 {
+        width: 95%;
+    }
+    section.picture-container1 {
+        height: 83vh;
+        background: black;
+    }
+    section.picture-container {
+        background: black;
+    }
+}
+@media (max-width: 2010px){
+    section.picture-container1 {
+        background: black;
+    }
+}

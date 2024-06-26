@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="website icon" type="png" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" id="menu">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="ourChef.html">Our Chef</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <div class="burger-menu" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <a href="login.html" id="loginButton" class="loginButton">Log In</a>
+            </nav>
+        </div>
+    </header>
+    <main id="page-main">
+        <h1>Marco's Menu</h1>
+        <nav>
+            <ul class="category-menu">
+                <li><a href="#" onclick="showSection('main-course')">Main Course</a></li>
+                <li><a href="#" onclick="showSection('dessert')">Dessert</a></li>   
+                <li><a href="#" onclick="showSection('drinks')">Drinks</a></li>
+            </ul>
+        </nav>
+        <div class="product-list" id="main-course">
+            <div class="product-item">
+                <img src="images/ribeye.jpg" alt="mCourse">
+                <p class="name">Grilled Ribeye Steak</p>
+                <p class="price">₱1,000</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/roast chicken.png" alt="mCourse 2">
+                <p class="name">Roast Chicken</p>
+                <p class="price">₱500</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Grilled salmon.png" alt="mCourse 3">
+                <p class="name">Grilled Salmon</p>
+                <p class="price">₱600</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/broiled lobster.png" alt="mCourse 4">
+                <p class="name">Broiled Lobster Tail</p>
+                <p class="price">₱550</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/fish&chips.jpg" alt="mCourse 5">
+                <p class="name">Fish & Chips</p>
+                <p class="price">₱450</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/seafood paella.jpg" alt="mCourse 6">
+                <p class="name">Seafood Paella</p>
+                <p class="price">₱350</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="product-list" id="dessert" style="display:none;">
+            <div class="product-item">
+                <img src="images/chocolate cake.jpg" alt="dessert">
+                <p class="name">Chocolate Cake</p>
+                <p class="price">₱400</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/apple pie.jpg" alt="dessert 2">
+                <p class="name">Apple Pie</p>
+                <p class="price">₱600</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Croissant.jpg" alt="dessert 3">
+                <p class="name">Croissant</p>
+                <p class="price">₱300</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/flan.png" alt="dessert 4">
+                <p class="name">Flan</p>
+                <p class="price">₱350</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/split.jpg" alt="dessert 5">
+                <p class="name">Banana Split</p>
+                <p class="price">₱250</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Fruit tart.jpg" alt="dessert 6">
+                <p class="name">Fruit Tart</p>
+                <p class="price">₱500</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="product-list" id="drinks" style="display:none;">
+            <div class="product-item">
+                <img src="images/orange.jpg" alt="drink">
+                <p class="name">Orange Juice</p>
+                <p class="price">₱50</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/grape.jpg" alt="drink 2">
+                <p class="name">Grape Wine</p>
+                <p class="price">₱300</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/bubble.png" alt="drink 3">
+                <p class="name">Bubble Tea</p>
+                <p class="price">₱150</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/smooth.png" alt="drink 4">
+                <p class="name">Smoothies</p>
+                <p class="price">₱200</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/hot choco.jpg" alt="drink 5">
+                <p class="name">Hot Chocolate</p>
+                <p class="price">₱100</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/mohito.png" alt="drink 6">
+                <p class="name">Mohito</p>
+                <p class="price">₱250</p>
+                <button onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="footer">
+            <p>2024 Marco's Dining Establishment. All rights reserved. Designed by PAJA, JOHN MARCO R. & MIRABUENO, EUGENE M. – BSIT-22M1 for ICT 008 Final Project.</p>
+        </div>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>

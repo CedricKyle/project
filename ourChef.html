@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Chef</title>
+    <link rel="website icon"  type="jpg" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ourChef.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="ourChef.html" id="chef">Our Chef</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <div class="burger-menu" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <a href="login.html" id="loginButton" class="loginButton">Log In</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="chef-section">
+            <div class="container">
+                <h1>Meet Our Chef</h1>
+                <div class="chef-info">
+                    <img src="marco.png" alt="Chef Image">
+                    <div class="chef-bio">
+                        <h2>Chef John Marco Paja</h2>
+                        <p>Executive Chef<br> Graduated from NCST(National college of Science and Technology) he is the Executive Chef from Marco's dining Establishment 
+                           and owner of the said restaurant.
+                        </p>
+                    </div>
+                </div>
+                <div class="specialties">
+                    <h2>Specialties</h2>
+                    <ul>
+                        <li data-image="images/ribeye.jpg">Grilled Ribeye Steak</li>
+                        <li data-image="images/roast chicken.png">Roast Chicken</li>
+                        <li data-image="images/Grilled salmon.png">Grilled Salmon</li>
+                    </ul>
+                    <div id="image-container">
+                        <img id="displayed-image" src="" alt="Selected dish" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chef-section2">
+            <div class="container2">
+                <h1>Meet Our Chef</h1>
+                <div class="chef-info2">
+                    <img src="eugene.png" alt="Chef Image">
+                    <div class="chef-bio2">
+                        <h2>Chef Eugene Mirabueno</h2>
+                        <p>Sous Chef <br> Graduated from NCST (National college of Science and Technology), he is the Sous Chef from Marco's Dining Establishment</p>
+                    </div>
+                </div>
+                <div class="specialties2">
+                    <h2>Specialties</h2>
+                    <ul>
+                        <li data-image="images/chocolate cake.jpg">Chocolate Cake</li>
+                        <li data-image="images/apple pie.jpg">Apple Pie</li>
+                        <li data-image="images/croissant.jpg">Croissant</li>
+                    </ul>
+                    <div id="image-container2">
+                        <img id="displayed-image2" src="" alt="Selected dish" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="footer">
+            <p>2024 Marco's Dining Establishment. All rights reserved. Designed by PAJA, JOHN MARCO R. & MIRABUENO, EUGENE M. – BSIT-22M1 for ICT 008 Final Project.</p>
+        </div>
+    </footer>
+    <script src="ourChef.js"></script>
+</body>
+</html>

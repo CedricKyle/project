@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="website icon" type="jpg" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signIn.css">
+</head>
+<body>
+    <main id="main-page">
+        <div id="loginwrap">
+            <div class="container">
+                <div class="loginrow">
+                    <div id="div-2">
+                        <img src="logo.jpg" alt="try again" id="log-image">
+                        <h1>Create a New Account</h1>
+                        <p class="phar1">Join Us Today</p>
+                        <p class="phar1">Setting up your account is simple and straightforward.</p>
+                        <form id="login-form" action="index.html" target="_self" onsubmit="return validateForm()">
+                            <div class="name-container">
+                                <div>
+                                    <input id="fname" required type="text" placeholder="First Name">
+                                    <div id="fname-error" class="error"></div>
+                                </div>
+                                <div>
+                                    <input id="lname" required type="text" placeholder="Last Name">
+                                    <div id="lname-error" class="error"></div>
+                                </div>
+                            </div>
+                            <input id="mobnum" required type="text" placeholder="Mobile Number or Email">
+                            <div id="mobnum-error" class="error"></div>
+                            <input id="pass" required type="password" placeholder="Password">
+                            <div id="pass-error" class="error"></div>
+                            <label id="label1">
+                                <input type="checkbox" id="show-password"> Show Password
+                            </label>
+                            <p class="phar2">Birthday</p>
+                            <input type="date" id="birthdate" required>
+                            <div id="birthdate-error" class="error"></div>
+                            <p class="phar2">Gender</p>
+                            <div class="gender-selection">
+                                <div class="gender-option">
+                                    <input type="radio" id="female" name="gender" value="female" class="radio-input">
+                                    <label for="female" class="radio-label">
+                                        <span class="radio-custom"></span>
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" id="male" name="gender" value="male" class="radio-input">
+                                    <label for="male" class="radio-label">
+                                        <span class="radio-custom"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" id="unidentified" name="gender" value="unidentified" class="radio-input">
+                                    <label for="unidentified" class="radio-label">
+                                        <span class="radio-custom"></span>
+                                        Unidentified
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="gender-error" class="error"></div>
+                            <input type="submit" id="login" value="Sign in">
+                        </form>
+                        <div class="signIn">
+                            <a href="login.html">
+                                <p id="pId">Have an account?</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="page-footer">
+        <div class="footer">
+            <p>2024 Marco's Dining Establishment. All rights reserved. Designed by PAJA, JOHN MARCO R. & MIRABUENO, EUGENE M. – BSIT-22M1 for ICT 008 Final Project.</p>
+        </div>
+    </footer>
+    <script src="signIn.js"></script>
+</body>
+</html>

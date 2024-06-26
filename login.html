@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="website icon"  type="jpg" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <main id="main-page">
+        <div id="loginwrap">
+            <div class="container">
+                <div class="loginrow">
+                    <div id="div-2">
+                        <img src="logo.jpg" alt="try again" id="log-image" method="post">
+                        <h1>Marco's dining Establishment</h1>
+                        <p>Welcome Back! Please log in to continue enjoying our delicious offerings and exceptional service.</p>
+                        <form id="login-form" action="index.html" target="_self">
+                            <input id="name" required type="text" placeholder="Username">
+                            <div id="username-error"></div>
+                            <input id="pass" required type="password" placeholder="Password">
+                            <div id="password-error"></div>
+                            <label>
+                                <input type="checkbox" id="show-password"> Show Password
+                            </label>
+                            <input type="submit" id="login" value="Login">
+                        </form>
+                        <div class="signIn">
+                            <a href="signIn.html">
+                                <p id="pId">Don't have an account yet?</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="page-footer">
+        <div class="footer">
+            <p>2024 Marco's Dining Establishment. All rights reserved. Designed by PAJA, JOHN MARCO R. & MIRABUENO, EUGENE M. – BSIT-22M1 for ICT 008 Final Project.</p>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>
